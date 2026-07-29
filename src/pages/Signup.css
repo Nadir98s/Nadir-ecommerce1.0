@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.formLabel {
+    font-weight: 900;
+}
+
+.loginDiv {
+    display: flex;
+    margin: 50px auto;
+    padding: 20px;
+    flex-direction: column;
+    width: 50%;
+    /* height: 300px; */
+    justify-content: space-around;
+
+    border: 3px solid aqua;
+    border-radius: 20px;
+}
+
+.loginDiv input {
+    /* height: 30px; */
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px 0px 0px;
+    box-sizing: border-box;
+}
+
+.inputDiv {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.loginHeading {
+    margin: 20px 0px;
+}
+
+.passwordInput {
+    display: flex;
+    position: relative;
+}
+
+.PasswordShowBtn {
+    background-color: transparent;
+    border: none;
+    color: oklch(70.7% .022 261.325);
+    
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translate(-50%, -25%);
+}
+
+.createAccBtn {
+    background-color: rgb(99, 102, 241);
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.haveAccount{
+    margin: 30px auto 15px;
+    color: rgb(106, 114, 130);
+}
+
+.haveAccount a{
+    color: rgb(99, 102, 241);
+    text-decoration: none;
+}
+
+.error-message {
+    display: block;
+    color: red;
+    margin: 3px 0px;
+    font-size: 0.875rem;
+
+}

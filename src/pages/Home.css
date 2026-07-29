@@ -1,0 +1,218 @@
+.topFixBar {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 4rem;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.mainBtn{
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+.QLogo {
+    display: flex;
+    color: white;
+    background-color: #6366f1;
+    border-radius: .75rem;
+    width: 2rem;
+    height: 2rem;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+}
+
+.QLogoText{
+    color: oklch(21% .034 264.665);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.searchBar {
+    display: flex;
+    border-radius: 3rem;
+    width: 36rem;
+    border: 2px solid #0000001a;
+    align-items: center;
+}
+
+.searchLogo{
+    margin: 0px 5px;
+    color: oklch(70.7% .022 261.325)
+}
+
+.searchInput{
+    border: none;
+    font-size: 0.875rem;
+    padding-block: 0.5rem;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    width: 100%;
+    border-radius: 3rem;
+
+}
+
+.accountCart{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.accountBtn {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    /* justify-items: center; */
+}
+
+.cartBtn {
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.cartProductsNmbr{
+    display: flex;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    background-color: #6366f1;
+    border-radius: 3.40282e38px;
+    justify-content: center;
+    align-items: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+    top: -0.7rem;
+    right: -0.7rem;
+}
+
+.header {
+  display: flex;
+  background-image: linear-gradient(to bottom right, #4f46e5, #6366f1, #9333ea);
+  
+  /* text-white */
+  color: #ffffff;
+  
+  /* overflow-hidden */
+  overflow: hidden;
+
+  justify-content: space-around;
+}
+
+.headerSubDiv {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    padding: 6rem 2rem;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.headerDivTop{
+    width: 50%;
+}
+
+.headerSaleText {
+    font-size: 0.875rem;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.headerHeading {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.headerText {
+    color: oklch(93% .034 272.788);
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.shopNow {
+    display: inline-flex;
+    color: oklch(51.1% .262 276.966);
+    border-radius: 1rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.headerImg img{
+    height: 18rem;
+    width: 18rem;
+    border-radius: 1.5rem;
+}
+
+/* 
+Strip
+ */
+.strip {
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    /* align-items: center;
+    align-content: center; */
+    margin: 0px auto;
+
+}
+
+.strip svg {
+    color: #6366f1;
+}
+
+.strip div{
+    display: flex;
+    align-items: center;
+    color: oklch(44.6% .03 256.802);
+    gap: 0.5rem;
+    margin: 1rem 2rem;
+
+}
+
+/* 
+Category Shopping
+*/
+.categoryCards {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+
+.categoryBtn {
+    padding: 1.25rem;
+    background-color: oklch(98.5% .002 247.839);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    gap: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.categoryBtnIcon {
+    font-size: 1.875rem;
+    line-height: 1.25rem;
+}
+
+.categoryText {
+    color: oklch(37.3% .034 259.733);
+    line-height: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
