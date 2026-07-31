@@ -7,12 +7,13 @@
     margin: 0px 20px;
 }
 
-.mainBtn{
+.mainBtn {
     display: flex;
     align-items: center;
     border: none;
     background-color: transparent;
 }
+
 .QLogo {
     display: flex;
     color: white;
@@ -25,7 +26,7 @@
     justify-content: center;
 }
 
-.QLogoText{
+.QLogoText {
     color: oklch(21% .034 264.665);
     font-weight: 700;
     font-size: 1.25rem;
@@ -39,12 +40,12 @@
     align-items: center;
 }
 
-.searchLogo{
+.searchLogo {
     margin: 0px 5px;
     color: oklch(70.7% .022 261.325)
 }
 
-.searchInput{
+.searchInput {
     border: none;
     font-size: 0.875rem;
     padding-block: 0.5rem;
@@ -55,7 +56,7 @@
 
 }
 
-.accountCart{
+.accountCart {
     display: flex;
     gap: 0.5rem;
 }
@@ -74,7 +75,7 @@
     position: relative;
 }
 
-.cartProductsNmbr{
+.cartProductsNmbr {
     display: flex;
     font-size: 0.75rem;
     font-weight: 600;
@@ -91,16 +92,16 @@
 }
 
 .header {
-  display: flex;
-  background-image: linear-gradient(to bottom right, #4f46e5, #6366f1, #9333ea);
-  
-  /* text-white */
-  color: #ffffff;
-  
-  /* overflow-hidden */
-  overflow: hidden;
+    display: flex;
+    background-image: linear-gradient(to bottom right, #4f46e5, #6366f1, #9333ea);
 
-  justify-content: space-around;
+    /* text-white */
+    color: #ffffff;
+
+    /* overflow-hidden */
+    overflow: hidden;
+
+    justify-content: space-around;
 }
 
 .headerSubDiv {
@@ -112,7 +113,7 @@
     justify-content: space-between;
 }
 
-.headerDivTop{
+.headerDivTop {
     width: 50%;
 }
 
@@ -149,7 +150,7 @@
     gap: 0.5rem;
 }
 
-.headerImg img{
+.headerImg img {
     height: 18rem;
     width: 18rem;
     border-radius: 1.5rem;
@@ -173,7 +174,7 @@ Strip
     color: #6366f1;
 }
 
-.strip div{
+.strip div {
     display: flex;
     align-items: center;
     color: oklch(44.6% .03 256.802);
@@ -185,6 +186,38 @@ Strip
 /* 
 Category Shopping
 */
+.category {
+    padding: 3.5rem 2rem;
+}
+
+.categoryHeadingDiv {
+    display: flex;
+    width: 80%;
+    margin: 0px auto 2rem;
+    justify-content: space-between;
+}
+
+.categoryViewAllBtn {
+    color: #6366f1;
+    border: none;
+    background-color: transparent;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+/* for featured products */
+/* .categoryViewAllBtn{
+    color:#6366f1;
+    border: none;
+    background-color: transparent;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+} */
+
 .categoryCards {
     display: flex;
     justify-content: center;
@@ -215,4 +248,132 @@ Category Shopping
     line-height: 1.25rem;
     font-size: 0.875rem;
     font-weight: 500;
+}
+
+/* 
+Featured Products
+ */
+ .featuredPDiv {
+     display: flex;
+     width: 80%;
+     margin: 0 auto;
+     gap: 1.5rem;
+ }
+
+.featuredCards{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+    border: 1px solid oklch(96.7% .003 264.542);
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    /* flex: 1; */
+}
+
+.featuredCardImgDiv {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    aspect-ratio: 1/1;
+    flex-shrink: none;
+    width: 100%;
+    /* flex: 0 0 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem); */
+}
+
+.featuredCardImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featuredCardSaleText {
+    color: white;
+    background-color: oklch(63.7% .237 25.331);
+    font-weight: 700;
+    font-size: 0.75rem;
+    border-radius: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.featuredCardTxt{
+    padding: 1rem;
+}
+
+.featuredCardTxt p{
+    color: #64748b;
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.5;
+}
+
+.featuredCardTxt h3{
+    color: oklch(21% .034 264.665);
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.375;
+    margin-bottom: 0.5rem;
+}
+
+.featuredCardRating {
+    display: flex;
+    font-size: 0.875rem;
+    color: #64748b;
+    gap: 0.5rem;
+}
+.featuredCardRatingStars svg{
+    color: oklch(82.8% .189 84.429);
+    /* border: none; */
+    fill: oklch(82.8% .189 84.429);
+    height: 0.875rem;
+    width: 0.875rem;
+    border-color: #0000001a;;
+}
+
+.featuredCardRatingStars{
+    display: flex;
+    gap: 0.125rem;
+}
+
+.featuredCardPrice {
+
+}
+
+.featuredPrice{
+    color: oklch(21% .034 264.665);
+    font-weight: 700;
+    
+    /* font-weight: bold; */
+    line-height: 1.5;
+}
+
+.featuredSalePrice {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-decoration: line-through;
+    margin-left: 0.5rem;
+}
+
+.featuredCardButton{
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    padding-block: 0.5rem;
+    background-color: #6366f1;
+
+    display: flex;
+    border-radius: 1rem;
+    gap: 0.5rem;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 0.75rem;
+    width: 100%;
+    border-color: #0000001a;
 }

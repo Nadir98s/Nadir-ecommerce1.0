@@ -1,6 +1,8 @@
 import { useState } from "react";
 import './Home.css'
 import yellowHeadphone from '../assets/images/yello headphone.jpg';
+import monitor4k from '../assets/images/monitor.jpg';
+import smartWatch from '../assets/images/smartwatch.jpg';
 
 function TopFixBar() {
     return (<div className="topFixBar">
@@ -90,8 +92,8 @@ function Strip() {
                 </div>
                 <div className="stripSecure">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-shield-check w-4 h-4 text-primary">
-                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
-                    <path d="m9 12 2 2 4-4"></path>
+                        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                        <path d="m9 12 2 2 4-4"></path>
                     </svg>
                     <span>Secure Checkout</span>
                 </div>
@@ -103,29 +105,103 @@ function Strip() {
 function Category() {
     return (
         <>
-        <div>
-            <div>
-                <h2>Shop by Category</h2>
-                <button>View all</button>
+            <div className="category">
+                <div className="categoryHeadingDiv">
+                    <h2 className="categoryHeading">Shop by Category</h2>
+                    <button className="categoryViewAllBtn">View all</button>
+                </div>
+                <div className="categoryCards">
+                    <CategoryBtn icon="💻" text="Electronics" />
+                    <CategoryBtn icon="👕" text="Clothing" />
+                    <CategoryBtn icon="⚽" text="Sports" />
+                    <CategoryBtn icon="👜" text="Accessories" />
+                    <CategoryBtn icon="🏠" text="Home" />
+                </div>
             </div>
-            <div className="categoryCards">
-                <CategoryBtn icon="💻" text="Electronics"/>
-                <CategoryBtn icon="👕" text="Clothing"/>
-                <CategoryBtn icon="⚽" text="Sports"/>
-                <CategoryBtn icon="👜" text="Accessories"/>
-                <CategoryBtn icon="🏠" text="Home"/>
-            </div>
-        </div>
         </>
     )
 }
 
-function CategoryBtn ({icon, text}) {
+function CategoryBtn({ icon, text }) {
     return (
         <button className="categoryBtn">
             <span className="categoryBtnIcon">{icon}</span>
             <span className="categoryText">{text}</span>
         </button>
+
+    )
+}
+
+function FeaturedProducts() {
+    return (
+        <>
+            <div className="category">
+                <div className="categoryHeadingDiv">
+                    <h2 className="categoryHeading">Featured Products</h2>
+                    <button className="categoryViewAllBtn">
+                        View all
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-arrow-right w-3.5 h-3.5">
+                            <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div className="featuredPDiv">
+                    <FeaturedCards company="SoundPro" product="Wireless Noise-Cancelling Headphones" src={yellowHeadphone} price="79.99" salePrice="129.99"/>
+                    <FeaturedCards company="LumaBright" product='4K Ultra HD Monitor 27"' src={monitor4k} price="349.99" />
+                    <FeaturedCards company="TechFit" product="Smart Fitness Watch" src={smartWatch} price="149.99" />
+                </div>
+            </div>
+        </>
+    )
+}
+
+function FeaturedCards({ company, product, price, salePrice, src, noReviews }) {
+    console.log("SsalesPrice", salePrice);
+    return (
+        <div className="featuredCards">
+            <div className="featuredCardImgDiv">
+                <img className="featuredCardImg" src={src} />
+                <span className="featuredCardSaleText">SALE</span>
+            </div>
+            <div className="featuredCardTxt">
+                <div className="featuredCardInfo">
+                    <p>{company}</p>
+                    <h3>{product}</h3>
+                </div>
+                <div className="featuredCardRating">
+                    <div className="featuredCardRatingStars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-star w-3.5 h-3.5 fill-amber-400 text-amber-400">
+                            <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-star w-3.5 h-3.5 fill-amber-400 text-amber-400">
+                            <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-star w-3.5 h-3.5 fill-amber-400 text-amber-400">
+                            <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-star w-3.5 h-3.5 fill-amber-400 text-amber-400">
+                            <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-star w-3.5 h-3.5 text-gray-200 fill-gray-200">
+                            <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                        </svg>
+                    </div>
+                    <span>({noReviews})</span>
+                </div>
+                <div className="featuredCardPrice">
+                    <span className="featuredPrice">${price}</span>
+                    {salePrice !== undefined?<span className="featuredSalePrice">${salePrice}</span>:""}
+                </div>
+                <button className="featuredCardButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-shopping-cart w-4 h-4">
+                        <circle cx="8" cy="21" r="1"></circle>
+                        <circle cx="19" cy="21" r="1"></circle>
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                    </svg>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
 
     )
 }
@@ -136,7 +212,8 @@ function Homee() {
             <TopFixBar />
             <Header />
             <Strip />
-            <Category/>
+            <Category />
+            <FeaturedProducts />
         </>
     )
 }
