@@ -102,6 +102,7 @@ function Filter({setMinPrice, setMaxPrice, setBrands, brands, setRating4Plus, se
 
 function ElectronicsProducts({minPrice, maxPrice, brands, rating4Plus, rating3Plus, totalProducts, filteredProducts, setTotalProducts, setFilteredProducts}) {
     const [sortType, setSortType] = useState(1);
+    const electronicsPage = true;
     // const [minPrice, setMinPrice] = useState(0);
     // const [maxPrice, setMaxPrice] = useState(99999);
 
@@ -120,7 +121,7 @@ function ElectronicsProducts({minPrice, maxPrice, brands, rating4Plus, rating3Pl
                     <path d="m6 9 6 6 6-6"></path>
                 </svg>
             </div>
-            <FeaturedProducts sortType={sortType} minPrice={minPrice} maxPrice={maxPrice} brands={brands} rating4Plus={rating4Plus} rating3Plus={rating3Plus} setTotalProducts={setTotalProducts} setFilteredProducts={setFilteredProducts}/>
+            <FeaturedProducts sortType={sortType} minPrice={minPrice} maxPrice={maxPrice} brands={brands} rating4Plus={rating4Plus} rating3Plus={rating3Plus} setTotalProducts={setTotalProducts} setFilteredProducts={setFilteredProducts} electronicsPage={electronicsPage}/>
         </div>
     )
 }

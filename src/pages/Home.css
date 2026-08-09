@@ -215,17 +215,17 @@ Category Shopping
 */
 
 .FeaturedProductsP {
-    width: 80%;
+    width: 76%;
     margin: 0px auto;
 }
 
 .category {
-    padding: 3.5rem 2rem;
+    padding: 3.5rem 0rem;
 }
 
 .categoryHeadingDiv {
     display: flex;
-    width: 80%;
+    width: 100%;
     margin: 0px auto 2rem;
     justify-content: space-between;
 }
@@ -256,7 +256,7 @@ Category Shopping
     justify-content: center;
     gap: 0.75rem;
     justify-content: space-around;
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 

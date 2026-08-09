@@ -139,7 +139,7 @@ function CategoryBtn({ icon, text }) {
     )
 }
 
-export function FeaturedProducts({ sortType = 2, minPrice = 0, maxPrice = 99999, brands, rating4Plus, rating3Plus, setTotalProducts, setFilteredProducts}) {
+export function FeaturedProducts({ sortType = 1, minPrice = 0, maxPrice = 99999, brands, rating4Plus, rating3Plus, setTotalProducts = () => {}, setFilteredProducts = () => {}, electronicsPage=false}) {
     
     // let varr;
     let featuredCardsData = [
@@ -215,10 +215,12 @@ export function FeaturedProducts({ sortType = 2, minPrice = 0, maxPrice = 99999,
         console.log(varr, typeof (varr), "type");
         return varr;
     }
+
+    electronicsPage ? "": featuredCardsData = featuredCardsData.slice(0,3);
     return (
         <>
             <div className="category">
-                {/* <div className="categoryHeadingDiv">
+                {electronicsPage ? "" : <div className="categoryHeadingDiv">
                     <h2 className="categoryHeading">Featured Products</h2>
                     <button className="categoryViewAllBtn">
                         View all
@@ -226,12 +228,11 @@ export function FeaturedProducts({ sortType = 2, minPrice = 0, maxPrice = 99999,
                             <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
                         </svg>
                     </button>
-                </div> */}
+                </div>}
                 <div className="featuredPDiv">
                     {/* <FeaturedCards company="SoundPro" product="Wireless Noise-Cancelling Headphones" src={yellowHeadphone} price="79.99" salePrice="129.99" />
                     <FeaturedCards company="LumaBright" product='4K Ultra HD Monitor 27"' src={monitor4k} price="349.99" />
                     <FeaturedCards company="TechFit" product="Smart Fitness Watch" src={smartWatch} price="149.99" /> */}
-
 
 
                     {featuredCardsData.length ? featuredCardsData.map((item, index) => (
@@ -370,7 +371,9 @@ function Homee() {
             <TopFixBar />
             <Header />
             <Strip />
-            <Category />
+            <div className="FeaturedProductsP">
+                <Category />
+            </div>
             <div className="FeaturedProductsP">
                 <FeaturedProducts />
             </div>
