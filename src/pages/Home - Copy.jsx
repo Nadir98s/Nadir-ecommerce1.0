@@ -2,7 +2,7 @@ import { useState } from "react";
 import './Home.css'
 import yellowHeadphone from '../assets/images/yello headphone.jpg';
 import monitor4k from '../assets/images/monitor.jpg';
-import smartWatch from '../assets/images/smartwatch.jpg'; import earbuds from '../assets/images/earbuds.jpg';
+import smartWatch from '../assets/images/smartwatch.jpg';import earbuds from '../assets/images/earbuds.jpg';
 import keyboard from '../assets/images/keyboard.jpg';
 import speaker from '../assets/images/speaker.jpg';
 
@@ -11,39 +11,39 @@ function TopFixBar() {
     return (
         <div className="topFixBar">
             {/* <div className="topFixBarDivP"> */}
-            <div >
-                <button className="mainBtn">
-                    <div className="QLogo">
-                        <span>Q</span>
-                    </div>
-                    <span className="QLogoText">QuickCart</span>
-                </button>
-            </div>
-            <form className="searchBar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="searchLogo">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.3-4.3"></path>
-                </svg>
-                <input className="searchInput" placeholder="Search products . . ."></input>
-            </form>
-            <div className="accountCart">
-                <button className="accountBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-user w-5 h-5">
-                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
+                <div >
+                    <button className="mainBtn">
+                        <div className="QLogo">
+                            <span>Q</span>
+                        </div>
+                        <span className="QLogoText">QuickCart</span>
+                    </button>
+                </div>
+                <form className="searchBar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="searchLogo">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
                     </svg>
-                    <span>Account</span>
-                </button>
-                <button className="cartBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shopping-cart w-5 h-5 text-gray-700">
-                        <circle cx="8" cy="21" r="1"></circle>
-                        <circle cx="19" cy="21" r="1"></circle>
-                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
-                    </svg>
-                    <span className="cartProductsNmbr">4</span>
-                </button>
-                {/* <button></button> */}
-            </div>
+                    <input className="searchInput" placeholder="Search products . . ."></input>
+                </form>
+                <div className="accountCart">
+                    <button className="accountBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-user w-5 h-5">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span>Account</span>
+                    </button>
+                    <button className="cartBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shopping-cart w-5 h-5 text-gray-700">
+                            <circle cx="8" cy="21" r="1"></circle>
+                            <circle cx="19" cy="21" r="1"></circle>
+                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                        </svg>
+                        <span className="cartProductsNmbr">4</span>
+                    </button>
+                    {/* <button></button> */}
+                </div>
             {/* </div> */}
         </div>
     )
@@ -139,71 +139,15 @@ function CategoryBtn({ icon, text }) {
     )
 }
 
-export function FeaturedProducts({ sortType = 2, minPrice = 0, maxPrice = 99999, brands, rating4Plus, rating3Plus, setTotalProducts, setFilteredProducts}) {
-    
+export function FeaturedProducts() {
     // let varr;
-    let featuredCardsData = [
-        { company: "SoundPro", product: "Wireless Noise-Cancelling Headphones", src: { yellowHeadphone }, reviews: "128", rating: "4.3", price: "79.99", salePrice: "129.99" },
-        { company: "LumaBright", product: '4K Ultra HD Monitor 27"', src: { monitor4k }, reviews: "89", rating: "3.8", price: "349.99" },
-        { company: "TechFit", product: "Smart Fitness Watch", src: { smartWatch }, reviews: "214", rating: "4.6", price: "149.99" },
-        { company: "SoundPro", product: "Wireless Earbuds Pro", src: { earbuds }, reviews: "347", rating: "4.1", price: "59.99", salePrice: "89.99" },
-        { company: "KeyMaster", product: "Mechanical Keyboard", src: { keyboard }, reviews: "156", rating: "3.9", price: "89.99" },
-        { company: "SoundPro", product: "Portable Bluetooth Speaker", src: { speaker }, reviews: "92", rating: "2.8", price: "49.99" }
+    const featuredCardsData = [{ company: "SoundPro", product: "Wireless Noise-Cancelling Headphones", src: { yellowHeadphone }, price: "79.99", salePrice: "129.99" },
+    { company: "LumaBright", product: '4K Ultra HD Monitor 27"', src: { monitor4k }, price: "349.99" },
+    { company: "TechFit", product: "Smart Fitness Watch", src: { smartWatch }, price: "149.99" },
+    { company: "SoundPro", product: "Wireless Earbuds Pro", src: { earbuds }, price: "59.99", salePrice: "89.99" },
+    { company: "KeyMaster", product: "Mechanical Keyboard", src: { keyboard }, price: "89.99" },
+    { company: "SoundPro", product: "Portable Bluetooth Speaker", src: { speaker }, price: "49.99" }
     ]
-    setTotalProducts(featuredCardsData.length);
-
-    if (brands != undefined) {
-        console.log(brands, typeof (brands), "brands", brands.length)
-        featuredCardsData = brands.length > 0 ? featuredCardsData.filter((item) => brands.includes(item.company)) : featuredCardsData;
-        console.log("afterBrands", featuredCardsData);
-    }
-
-    console.log("ratings", rating4Plus, rating3Plus);
-    if (rating4Plus) {
-        featuredCardsData = featuredCardsData.filter((item) => Number(item.rating) > 4);
-        console.log("afterRating4", featuredCardsData);
-    }
-
-    if (rating3Plus) {
-        featuredCardsData = featuredCardsData.filter((item) => Number(item.rating) > 3);
-        console.log("afterRating3", featuredCardsData);
-    }
-
-    minPrice = Number(minPrice);
-    maxPrice = Number(maxPrice);
-    console.log("beforemin", featuredCardsData, typeof (maxPrice));
-    console.log("beforemin", featuredCardsData);
-    featuredCardsData = minPrice != 0 ? featuredCardsData.filter((item) => item.price > minPrice) : featuredCardsData;
-    console.log("beforemax", featuredCardsData);
-    maxPrice != 99999 ? featuredCardsData = featuredCardsData.filter((item) => item.price < maxPrice) : 0;
-    console.log("aftermax", featuredCardsData);
-
-    // featuredCardsData = featuredCardsData.sort((a, b) => a.price - b.price);
-    console.log("Switch", sortType, typeof (sortType));
-    switch (Number(sortType)) {
-        case 1:
-            featuredCardsData;
-            console.log("Case1")
-            break;
-        case 2:
-            featuredCardsData.sort((a, b) => a.price - b.price);
-            console.log("Case2")
-            break;
-        case 3:
-            featuredCardsData.sort((a, b) => b.price - a.price);
-            break;
-        case 4:
-            featuredCardsData.sort((a, b) => b.rating - a.rating);
-            break;
-
-        default:
-            break;
-    }
-
-    setFilteredProducts(featuredCardsData.length);
-
-    console.log("Sorted Data");
-    console.log(featuredCardsData);
 
     featuredCardsData.map(parseData);
 
@@ -218,7 +162,7 @@ export function FeaturedProducts({ sortType = 2, minPrice = 0, maxPrice = 99999,
     return (
         <>
             <div className="category">
-                {/* <div className="categoryHeadingDiv">
+                <div className="categoryHeadingDiv">
                     <h2 className="categoryHeading">Featured Products</h2>
                     <button className="categoryViewAllBtn">
                         View all
@@ -226,7 +170,7 @@ export function FeaturedProducts({ sortType = 2, minPrice = 0, maxPrice = 99999,
                             <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
                         </svg>
                     </button>
-                </div> */}
+                </div>
                 <div className="featuredPDiv">
                     {/* <FeaturedCards company="SoundPro" product="Wireless Noise-Cancelling Headphones" src={yellowHeadphone} price="79.99" salePrice="129.99" />
                     <FeaturedCards company="LumaBright" product='4K Ultra HD Monitor 27"' src={monitor4k} price="349.99" />
@@ -234,7 +178,7 @@ export function FeaturedProducts({ sortType = 2, minPrice = 0, maxPrice = 99999,
 
 
 
-                    {featuredCardsData.length ? featuredCardsData.map((item, index) => (
+                    {featuredCardsData.map((item, index) => (
                         <FeaturedCards
                             key={index}
                             company={item.company}
@@ -242,10 +186,7 @@ export function FeaturedProducts({ sortType = 2, minPrice = 0, maxPrice = 99999,
                             src={Object.values(item.src)[0]}
                             price={item.price}
                             salePrice={item.salePrice}
-                            noReviews={item.reviews}
-                        />)) :
-                        <div>No Product available</div>
-                        }
+                        />))}
 
                 </div>
             </div>
@@ -259,8 +200,7 @@ function FeaturedCards({ company, product, price, salePrice, src, noReviews }) {
         <div className="featuredCards">
             <div className="featuredCardImgDiv">
                 <img className="featuredCardImg" src={src} />
-                {salePrice !== undefined ? <span className="featuredCardSaleText">SALE</span> : ""}
-
+                <span className="featuredCardSaleText">SALE</span>
             </div>
             <div className="featuredCardTxt">
                 <div className="featuredCardInfo">
@@ -371,9 +311,7 @@ function Homee() {
             <Header />
             <Strip />
             <Category />
-            <div className="FeaturedProductsP">
-                <FeaturedProducts />
-            </div>
+            <FeaturedProducts />
             <Footer />
         </>
     )

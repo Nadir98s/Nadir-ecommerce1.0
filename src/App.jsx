@@ -7,6 +7,7 @@ import './App.css'
 import Login from './pages/Login.jsx'
 import Signup from './pages/Signup.jsx'
 import Home from './pages/Home.jsx'
+import Electronics from './pages/Electronics.jsx'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/electronics" element={<Electronics />} />
         </Routes>
       </BrowserRouter>
     </>
